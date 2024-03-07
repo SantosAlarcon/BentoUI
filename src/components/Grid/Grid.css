@@ -1,0 +1,99 @@
+.grid__layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "gato1 gato1 gato1 gato2 gato2"
+        "gato1 gato1 gato1 gato2 gato2"
+        "gato1 gato1 gato1 gato3 gato3"
+        "gato4 gato4 gato4 gato3 gato3"
+        "gato4 gato4 gato4 gato5 gato5"
+        "gato4 gato4 gato4 gato5 gato5"
+        "gato6 gato6 gato7 gato7 gato7"
+        "gato8 gato8 gato7 gato7 gato7"
+        "gato8 gato8 gato9 gato9 gato9"
+        "gato8 gato8 gato9 gato9 gato9"
+        "gato10 gato10 gato9 gato9 gato9"
+        "gato10 gato10 gato9 gato9 gato9"
+        ;
+    gap: 2rem;
+
+    & div {
+        border-radius: 3rem;
+        filter: drop-shadow(0 7px 7px #0006);
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @media (width < 512px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "gato1 gato2"
+            "gato3 gato4"
+            "gato5 gato6"
+            "gato7 gato8"
+            "gato9 gato10";
+
+        & img {
+            border-radius: 1rem;
+        }
+    }
+}
+
+.grid__layout__gato1 {
+    grid-area: gato1;
+    overflow: hidden;
+}
+
+.grid__layout__gato2 {
+    grid-area: gato2;
+    overflow: hidden;
+}
+
+.grid__layout__gato3 {
+    grid-area: gato3;
+    overflow: hidden;
+}
+
+.grid__layout__gato4 {
+    grid-area: gato4;
+    overflow: hidden;
+}
+
+.grid__layout__gato5 {
+    grid-area: gato5;
+    overflow: hidden;
+}
+
+.grid__layout__gato6 {
+    grid-area: gato6;
+    overflow: hidden;
+}
+
+.grid__layout__gato7 {
+    grid-area: gato7;
+    overflow: hidden;
+}
+
+.grid__layout__gato8 {
+    grid-area: gato8;
+    overflow: hidden;
+}
+
+.grid__layout__gato9 {
+    grid-area: gato9;
+    overflow: hidden;
+}
+
+.grid__layout__gato10 {
+    grid-area: gato10;
+    overflow: hidden;
+}
